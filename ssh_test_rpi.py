@@ -29,7 +29,7 @@ def check_raspberry_pi(host, username, password):
         # Выполняем команду (например, проверяем uptime)
         stdin, stdout, stderr = ssh.exec_command('uptime')
         uptime = stdout.read().decode().strip()
-        logger.info(f"Uptime: {uptime}")
+        logger.info(f"Uptime: {uptime}\n")
         
         ssh.close()
     except Exception as e:
